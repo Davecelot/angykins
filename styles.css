@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.collage {
+  position: relative;
+  height: 60vh;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.collage-img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.img1 {
+  transform: rotate(-3deg);
+}
+
+.img2 {
+  transform: translateY(-20px);
+}
+
+.img3 {
+  transform: rotate(3deg);
+}
+
+.collage-img:hover {
+  transform: scale(1.02) translateY(-10px);
+  z-index: 2;
+}
+
+.message {
+  margin-top: 2rem;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #333;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .collage {
+    height: 30vh;
+    align-items: center;
+    margin-bottom: 0rem;
+    gap: 1rem;
+    overflow-x: scroll;
+  }
+
+  .collage-img {
+    height: auto;
+    width:30%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
